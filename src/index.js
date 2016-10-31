@@ -24,9 +24,9 @@ var position, positionX, positionY;
 
 // load resources
 PIXI.loader
-	.add("duck.gif")
-	.add("monster.png")
-	.add("bird.png")
+	.add("../res/duck.gif")
+	.add("../res/monster.png")
+	.add("../res/bird.png")
 	.on("progress", function(loader, resource) {
 		console.log("loading... " + loader.progress + "% - " + resource.url);
 	})
@@ -41,7 +41,7 @@ PIXI.loader
 function loadSprites() {
 	// player
 	player = new PIXI.Sprite(
-        PIXI.loader.resources["duck.gif"].texture
+        PIXI.loader.resources["../res/duck.gif"].texture
     );
     player.y = 200;
     player.x = 200;
@@ -51,7 +51,7 @@ function loadSprites() {
     
     // bird
     bird = new PIXI.Sprite(
-        PIXI.loader.resources["bird.png"].texture
+        PIXI.loader.resources["../res/bird.png"].texture
     );
     bird.x = 700;
     bird.y = 500;
@@ -59,7 +59,7 @@ function loadSprites() {
     
     // monster
     monster = new PIXI.Sprite(
-        PIXI.loader.resources["monster.png"].texture
+        PIXI.loader.resources["../res/monster.png"].texture
     );
     monster.x = window.innerWidth - 150;
     monster.y = window.innerHeight - 150;
